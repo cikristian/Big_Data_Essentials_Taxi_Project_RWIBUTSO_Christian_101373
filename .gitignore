@@ -1,8 +1,0 @@
-Data/csv/
-Data/cleaned/
-Data/*.parquet
-revenue_run.txt
-routes_full.txt
-payment_run.txt
-locations_run.txt
-payment_log.txt
