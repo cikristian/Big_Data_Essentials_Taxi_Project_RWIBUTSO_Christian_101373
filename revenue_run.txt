@@ -1,0 +1,160 @@
+2026-08-30 02:09:45,587 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [mappers/mapper_revenue.py, reducers/reducer_revenue.py, taxi_zone_lookup.csv, /C:/Users/CHRIST~1/AppData/Local/Temp/hadoop-unjar7597902146647517045/] [] C:\Users\CHRIST~1\AppData\Local\Temp\streamjob4496422241530461061.jar tmpDir=null
+2026-08-30 02:09:46,834 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at localhost/127.0.0.1:8032
+2026-08-30 02:09:47,013 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at localhost/127.0.0.1:8032
+2026-08-30 02:09:47,266 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/Christian/.staging/job_1788036795161_0025
+2026-08-30 02:09:47,717 INFO mapred.FileInputFormat: Total input files to process : 3
+2026-08-30 02:09:47,723 INFO net.NetworkTopology: Adding a new node: /default-rack/127.0.0.1:9866
+2026-08-30 02:09:47,814 INFO mapreduce.JobSubmitter: number of splits:7
+2026-08-30 02:09:48,108 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1788036795161_0025
+2026-08-30 02:09:48,108 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2026-08-30 02:09:48,394 INFO conf.Configuration: resource-types.xml not found
+2026-08-30 02:09:48,395 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2026-08-30 02:09:48,462 INFO impl.YarnClientImpl: Submitted application application_1788036795161_0025
+2026-08-30 02:09:48,500 INFO mapreduce.Job: The url to track the job: http://DESKTOP-8GML0QF:8088/proxy/application_1788036795161_0025/
+2026-08-30 02:09:48,502 INFO mapreduce.Job: Running job: job_1788036795161_0025
+2026-08-30 02:09:58,607 INFO mapreduce.Job: Job job_1788036795161_0025 running in uber mode : false
+2026-08-30 02:09:58,609 INFO mapreduce.Job:  map 0% reduce 0%
+2026-08-30 02:10:24,809 INFO mapreduce.Job:  map 6% reduce 0%
+2026-08-30 02:10:25,827 INFO mapreduce.Job:  map 14% reduce 0%
+2026-08-30 02:10:26,838 INFO mapreduce.Job:  map 22% reduce 0%
+2026-08-30 02:10:27,856 INFO mapreduce.Job:  map 26% reduce 0%
+2026-08-30 02:10:30,987 INFO mapreduce.Job:  map 34% reduce 0%
+2026-08-30 02:10:32,018 INFO mapreduce.Job:  map 37% reduce 0%
+2026-08-30 02:10:33,034 INFO mapreduce.Job:  map 47% reduce 0%
+2026-08-30 02:10:34,055 INFO mapreduce.Job:  map 50% reduce 0%
+2026-08-30 02:10:38,316 INFO mapreduce.Job:  map 52% reduce 0%
+2026-08-30 02:10:39,339 INFO mapreduce.Job:  map 60% reduce 0%
+2026-08-30 02:10:40,366 INFO mapreduce.Job:  map 62% reduce 0%
+2026-08-30 02:10:41,381 INFO mapreduce.Job:  map 81% reduce 0%
+2026-08-30 02:10:42,389 INFO mapreduce.Job:  map 86% reduce 0%
+2026-08-30 02:10:54,467 INFO mapreduce.Job:  map 95% reduce 0%
+2026-08-30 02:10:55,475 INFO mapreduce.Job:  map 100% reduce 0%
+2026-08-30 02:10:59,496 INFO mapreduce.Job:  map 100% reduce 10%
+2026-08-30 02:10:59,497 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_r_000000_0, Status : FAILED
+Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#1
+	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:136)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:377)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:178)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.authentication.util.SubjectUtil.doAs(SubjectUtil.java:328)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1958)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:172)
+Caused by: java.io.IOException: Exceeded MAX_FAILED_UNIQUE_FETCHES; bailing-out.
+	at org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl.checkReducerHealth(ShuffleSchedulerImpl.java:397)
+	at org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl.copyFailed(ShuffleSchedulerImpl.java:312)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.copyFromHost(Fetcher.java:366)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.work(Fetcher.java:204)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+
+2026-08-30 02:11:00,521 INFO mapreduce.Job:  map 100% reduce 0%
+2026-08-30 02:11:05,568 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_m_000000_0, Status : FAILED
+Too many fetch failures. Failing the attempt. Last failure reported by attempt_1788036795161_0025_r_000000_1 from host DESKTOP-8GML0QF
+2026-08-30 02:11:05,569 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_m_000003_0, Status : FAILED
+Too many fetch failures. Failing the attempt. Last failure reported by attempt_1788036795161_0025_r_000000_1 from host DESKTOP-8GML0QF
+2026-08-30 02:11:05,570 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_m_000004_0, Status : FAILED
+Too many fetch failures. Failing the attempt. Last failure reported by attempt_1788036795161_0025_r_000000_1 from host DESKTOP-8GML0QF
+2026-08-30 02:11:05,570 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_r_000000_1, Status : FAILED
+Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#5
+	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:136)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:377)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:178)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.authentication.util.SubjectUtil.doAs(SubjectUtil.java:328)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1958)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:172)
+Caused by: java.io.IOException: Exceeded MAX_FAILED_UNIQUE_FETCHES; bailing-out.
+	at org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl.checkReducerHealth(ShuffleSchedulerImpl.java:397)
+	at org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl.copyFailed(ShuffleSchedulerImpl.java:312)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.copyFromHost(Fetcher.java:366)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.work(Fetcher.java:204)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+
+2026-08-30 02:11:06,580 INFO mapreduce.Job:  map 57% reduce 0%
+2026-08-30 02:11:28,402 INFO mapreduce.Job:  map 77% reduce 0%
+2026-08-30 02:11:29,410 INFO mapreduce.Job:  map 77% reduce 5%
+2026-08-30 02:11:34,459 INFO mapreduce.Job:  map 90% reduce 5%
+2026-08-30 02:11:34,460 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_m_000001_0, Status : FAILED
+Too many fetch failures. Failing the attempt. Last failure reported by attempt_1788036795161_0025_r_000000_2 from host DESKTOP-8GML0QF
+2026-08-30 02:11:35,473 INFO mapreduce.Job:  map 81% reduce 10%
+2026-08-30 02:11:36,479 INFO mapreduce.Job:  map 86% reduce 10%
+2026-08-30 02:11:43,523 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_r_000000_2, Status : FAILED
+Error: org.apache.hadoop.mapreduce.task.reduce.Shuffle$ShuffleError: error in shuffle in fetcher#5
+	at org.apache.hadoop.mapreduce.task.reduce.Shuffle.run(Shuffle.java:136)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:377)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:178)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.authentication.util.SubjectUtil.doAs(SubjectUtil.java:328)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1958)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:172)
+Caused by: java.io.IOException: Exceeded MAX_FAILED_UNIQUE_FETCHES; bailing-out.
+	at org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl.checkReducerHealth(ShuffleSchedulerImpl.java:397)
+	at org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl.copyFailed(ShuffleSchedulerImpl.java:312)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.copyFromHost(Fetcher.java:366)
+	at org.apache.hadoop.mapreduce.task.reduce.Fetcher.work(Fetcher.java:204)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+
+2026-08-30 02:11:44,526 INFO mapreduce.Job:  map 86% reduce 0%
+2026-08-30 02:11:52,584 INFO mapreduce.Job:  map 95% reduce 0%
+2026-08-30 02:11:53,592 INFO mapreduce.Job:  map 100% reduce 0%
+2026-08-30 02:12:03,670 INFO mapreduce.Job: Task Id : attempt_1788036795161_0025_m_000002_0, Status : FAILED
+Too many fetch failures. Failing the attempt. Last failure reported by attempt_1788036795161_0025_r_000000_3 from host DESKTOP-8GML0QF
+2026-08-30 02:12:04,678 INFO mapreduce.Job:  map 86% reduce 5%
+2026-08-30 02:12:05,683 INFO mapreduce.Job:  map 100% reduce 100%
+2026-08-30 02:12:05,688 INFO mapreduce.Job: Job job_1788036795161_0025 failed with state FAILED due to: Task failed task_1788036795161_0025_r_000000
+Job failed as tasks failed. failedMaps:0 failedReduces:1 killedMaps:0 killedReduces: 0
+
+2026-08-30 02:12:05,761 INFO mapreduce.Job: Counters: 44
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=281471872
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=767060768
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=18
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=0
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Failed map tasks=5
+		Failed reduce tasks=4
+		Killed map tasks=5
+		Launched map tasks=16
+		Launched reduce tasks=4
+		Other local map tasks=7
+		Data-local map tasks=5
+		Rack-local map tasks=4
+		Total time spent by all maps in occupied slots (ms)=380003
+		Total time spent by all reduces in occupied slots (ms)=76224
+		Total time spent by all map tasks (ms)=380003
+		Total time spent by all reduce tasks (ms)=76224
+		Total vcore-milliseconds taken by all map tasks=380003
+		Total vcore-milliseconds taken by all reduce tasks=76224
+		Total megabyte-milliseconds taken by all map tasks=389123072
+		Total megabyte-milliseconds taken by all reduce tasks=78053376
+	Map-Reduce Framework
+		Map input records=7208065
+		Map output records=7208063
+		Map output bytes=265116804
+		Map output materialized bytes=279532966
+		Input split bytes=768
+		Combine input records=0
+		Spilled Records=7208063
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=199
+		CPU time spent (ms)=52514
+		Physical memory (bytes) snapshot=2127192064
+		Virtual memory (bytes) snapshot=2411741184
+		Total committed heap usage (bytes)=1216348160
+		Peak Map Physical memory (bytes)=373780480
+		Peak Map Virtual memory (bytes)=413564928
+	File Input Format Counters 
+		Bytes Read=767060000
+2026-08-30 02:12:05,761 ERROR streaming.StreamJob: Job not successful!
+Streaming Command Failed!
